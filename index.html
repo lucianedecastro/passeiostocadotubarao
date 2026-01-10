@@ -355,6 +355,11 @@
             border-radius: 16px;
             padding: 2rem;
             box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            /* Ajuste para alinhar conteúdo verticalmente */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
         }
         .footer-section h4 {
             font-size: 1.25rem;
@@ -363,6 +368,7 @@
             border-bottom: 2px solid var(--accent-color);
             display: inline-block;
             padding-bottom: 0.5rem;
+            width: fit-content;
         }
         .cadastur-block {
             display: flex;
@@ -396,12 +402,16 @@
             height: 100px;
             display: block;
         }
+
+        /* AJUSTE DOS ÍCONES SOCIAIS */
         .social-links {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
+            gap: 3rem; /* Aumentado o espaço entre eles */
+            margin: auto 0; /* Centraliza verticalmente dentro do card */
+            padding: 2rem 0;
+            width: 100%;
         }
         .social-links a { 
             color: var(--white-color); 
@@ -411,8 +421,12 @@
             justify-content: center;
             text-decoration: none;
         }
-        .social-links a:hover { color: var(--accent-color); transform: scale(1.2); }
-        .social-links i { font-size: 30px; }
+        .social-links a:hover { color: var(--accent-color); transform: scale(1.15); }
+        
+        /* Aumento do tamanho dos ícones para preencher melhor o espaço */
+        .social-links i { 
+            font-size: 60px; /* Tamanho ampliado */
+        }
         
         .developer-credit { font-size: 0.9rem; color: #c1cfdb; }
         .developer-credit a { color: #e6eef6; text-decoration: none; }
@@ -468,6 +482,8 @@
             .carousel-item img { height: 300px; }
             .carousel-item.special-bg img { height: 300px; }
             .cadastur-logo { width: 200px; height: 66px; }
+            .social-links { gap: 2rem; }
+            .social-links i { font-size: 50px; }
         }
 
     </style>
