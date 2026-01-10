@@ -18,6 +18,7 @@
     <meta property="og:url" content="https://www.passeiostocadotubarao.com.br" />
     
     <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --primary-color: #0d3d5c;
@@ -398,13 +399,21 @@
         .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            align-items: center;
+            gap: 2rem;
             margin-bottom: 1.5rem;
         }
-        .social-links a { color: var(--white-color); transition: color 0.3s, transform 0.3s; display: inline-block; }
+        .social-links a { 
+            color: var(--white-color); 
+            transition: color 0.3s, transform 0.3s; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
         .social-links a:hover { color: var(--accent-color); transform: scale(1.2); }
-        .social-links svg { width: 30px; height: 30px; fill: #ffffff;}
-        .footer-contact p { margin-bottom: 0.5rem; }
+        .social-links i { font-size: 30px; }
+        
         .developer-credit { font-size: 0.9rem; color: #c1cfdb; }
         .developer-credit a { color: #e6eef6; text-decoration: none; }
         .developer-credit a:hover { text-decoration: underline; }
@@ -513,7 +522,6 @@
                     <div class="qr-code">
                         <img src="images/Certificado AIDA3.jpg" alt="QR Code para Certificado AIDA3 João Tubarão">
                     </div>
-                    <!-- Botão "Ver Certificado" removido conforme solicitado -->
                 </div>
             </div>
         </section>
@@ -522,7 +530,6 @@
             <div class="container">
                  <h2 class="section-title">Agende seu Passeio</h2>
 
-                 <!-- Texto quebrado em 3 parágrafos conforme solicitado -->
                  <div class="booking-text">
                      <p>Pronto para a aventura?</p>
                      <p>Fale conosco pelo WhatsApp e garanta sua data.</p>
@@ -554,23 +561,15 @@
             </div>
 
             <div class="footer-section">
-                <h4>Acesse nossas redes sociais</h4>
+                <h4>Fale conosco por WhatsApp ou Instagram</h4>
                 <div class="social-links">
                     <a href="https://wa.me/5512996450379" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654z" />
-                        </svg>
+                        <i class="fab fa-whatsapp"></i>
                     </a>
 
                     <a href="https://www.instagram.com/passeiostocadotubarao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919z" />
-                        </svg>
+                        <i class="fab fa-instagram"></i>
                     </a>
-                </div>
-
-                <div class="footer-contact">
-                    <p>+55 (12) 99645-0379</p>
                 </div>
             </div>
 
