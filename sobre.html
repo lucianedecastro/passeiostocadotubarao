@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sobre João Tubarão | Toca do Tubarão | Ubatuba</title>
+
+<meta name="description" content="Conheça João Tubarão, surfista, especialista em operações marítimas e certificado AIDA 3 no Litoral Norte de Ubatuba.">
+
+<link rel="icon" type="image/png" href="images/favicon-32x32.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--deep:#001f33;
+--primary:#0d3d5c;
+--accent:#00bcd4;
+--whatsapp:#25D366;
+--yellow:#fbbc05;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(180deg,#001f33 0%, #0a2f48 60%, #0d3d5c 100%);
+color:#e0f2f1;
+line-height:1.7;
+}
+
+/* ===== MENU VIDRO ===== */
+
+.menu-toggle{
+position:fixed;
+top:20px;
+right:20px;
+font-size:22px;
+color:white;
+z-index:2000;
+cursor:pointer;
+background:rgba(0,0,0,0.35);
+padding:12px 15px;
+border-radius:50%;
+backdrop-filter:blur(8px);
+transition:0.3s;
+}
+
+.menu-toggle:hover{
+background:rgba(251,188,5,0.95);
+color:#001f33;
+transform:rotate(90deg);
+}
+
+.menu-overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.45);
+opacity:0;
+visibility:hidden;
+transition:0.3s;
+z-index:1400;
+}
+
+.menu-overlay.active{
+opacity:1;
+visibility:visible;
+}
+
+.side-menu{
+position:fixed;
+top:0;
+right:-300px;
+width:300px;
+height:100%;
+background:rgba(13,61,92,0.75);
+backdrop-filter:blur(15px);
+display:flex;
+flex-direction:column;
+padding-top:120px;
+transition:0.4s cubic-bezier(.77,0,.18,1);
+z-index:1500;
+box-shadow:-10px 0 40px rgba(0,0,0,0.4);
+}
+
+.side-menu.active{
+right:0;
+}
+
+.side-menu a{
+color:var(--yellow);
+padding:1.2rem 2.5rem;
+text-decoration:none;
+font-weight:600;
+font-size:1.15rem;
+letter-spacing:0.5px;
+position:relative;
+transition:0.3s;
+}
+
+.side-menu a::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+height:100%;
+width:4px;
+background:var(--yellow);
+transform:scaleY(0);
+transition:0.3s;
+}
+
+.side-menu a:hover{
+background:rgba(251,188,5,0.1);
+padding-left:3rem;
+}
+
+.side-menu a:hover::before{
+transform:scaleY(1);
+}
+
+/* ===== RESTANTE ORIGINAL ===== */
+
+.header{
+background:#1a2c4e;
+padding:1rem 0;
+text-align:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:15px;
+text-decoration:none;
+color:white;
+}
+
+.logo img{
+width:50px;
+height:50px;
+border-radius:50%;
+border:2px solid white;
+}
+
+.hero{
+padding:7rem 1rem 5rem;
+text-align:center;
+}
+
+.hero h1{
+font-size:2.8rem;
+margin-bottom:1rem;
+color:white;
+}
+
+.hero p{
+max-width:750px;
+margin:auto;
+font-size:1.15rem;
+opacity:0.95;
+}
+
+.back-button{
+display:inline-block;
+margin-top:2rem;
+background:white;
+color:#0a2f48;
+padding:0.8rem 2rem;
+border-radius:50px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+.back-button:hover{
+background:var(--accent);
+color:white;
+}
+
+.section{
+padding:4rem 1rem;
+max-width:1000px;
+margin:auto;
+}
+
+.carousel{
+position:relative;
+max-width:900px;
+margin:3rem auto;
+overflow:hidden;
+border-radius:20px;
+box-shadow:0 25px 50px rgba(0,0,0,0.4);
+}
+
+.carousel-track{
+display:flex;
+transition:transform 0.5s ease-in-out;
+}
+
+.carousel img{
+width:100%;
+height:500px;
+object-fit:cover;
+flex:0 0 100%;
+}
+
+.carousel button{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:rgba(0,0,0,0.5);
+color:white;
+border:none;
+padding:1rem;
+cursor:pointer;
+border-radius:50%;
+}
+
+.prev{left:15px;}
+.next{right:15px;}
+
+.story{
+background:linear-gradient(
+145deg,
+rgba(255,255,255,0.07),
+rgba(255,255,255,0.03)
+);
+backdrop-filter:blur(8px);
+padding:3rem;
+border-radius:25px;
+margin-top:3rem;
+box-shadow:0 20px 40px rgba(0,0,0,0.35);
+border:1px solid rgba(0,188,212,0.3);
+}
+
+.story h2{
+color:var(--accent);
+margin-bottom:1.5rem;
+text-align:center;
+}
+
+.story p{
+margin-bottom:1.5rem;
+font-size:1.05rem;
+}
+
+.certificado{
+text-align:center;
+margin-top:4rem;
+}
+
+.certificado img{
+max-width:260px;
+width:100%;
+border-radius:12px;
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.certificado span{
+display:block;
+margin-top:1rem;
+font-size:0.9rem;
+color:#b2ebf2;
+}
+
+.cta{
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:var(--whatsapp);
+color:white;
+padding:1rem 2.5rem;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+margin-top:3rem;
+transition:0.3s;
+}
+
+.cta:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+.footer{
+background:linear-gradient(180deg,#0d3d5c 0%,#0a2f48 100%);
+color:#d7e3ee;
+padding:4rem 1rem 2rem;
+text-align:center;
+margin-top:4rem;
+}
+
+.footer a{
+color:#e6eef6;
+text-decoration:none;
+}
+
+@media(max-width:768px){
+.carousel img{height:300px;}
+.hero h1{font-size:2rem;}
+.certificado img{max-width:200px;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+<i class="fas fa-bars"></i>
+</div>
+
+<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+
+<nav class="side-menu" id="sideMenu">
+<a href="home.html">Início</a>
+<a href="turismo-nautico.html">Turismo Náutico</a>
+<a href="acesso-estrategico-mar.html">Acesso Estratégico ao Mar</a>
+<a href="sobre.html">Sobre</a>
+</nav>
+
+<header class="header">
+<a href="home.html" class="logo">
+<img src="images/logonovocomfundo.jpg" alt="Logo Toca do Tubarão">
+<h2>Passeios Toca do Tubarão</h2>
+</a>
+</header>
+
+<section class="hero">
+<h1>Sobre João Tubarão</h1>
+<p>
+Mais do que conduzir embarcações, João conduz experiências.
+Vivência real, leitura de mar e respeito pelo oceano moldaram a essência da Toca do Tubarão.
+</p>
+<a href="home.html" class="back-button">← Voltar ao Hub de Experiências</a>
+</section>
+
+<section class="section">
+
+<div class="carousel">
+<div class="carousel-track">
+<img src="images/joao1.jpeg">
+<img src="images/joao2.jpeg">
+<img src="images/joao3.jpeg">
+<img src="images/joao4.jpeg">
+<img src="images/joao5.jpg">
+</div>
+<button class="prev">&#10094;</button>
+<button class="next">&#10095;</button>
+</div>
+
+<div class="story">
+<h2>A História</h2>
+
+<p>
+Nascido e criado na Praia Vermelha do Norte, João construiu sua relação com o mar desde cedo.
+O que começou como vivência se transformou em leitura técnica, estratégia e domínio das condições marítimas.
+</p>
+
+<p>
+Surfista ativo e profundo conhecedor de correntes, fundos e entradas de praia, 
+entende que cada saída é única — e exige respeito ao tempo, ao vento e ao oceano.
+</p>
+
+<p>
+Com certificação internacional <strong>AIDA Nível 3</strong>, alia preparo técnico à prática diária,
+unindo segurança, conhecimento e experiência local em cada operação.
+</p>
+</div>
+
+<div class="certificado">
+<h2>Certificação AIDA Nível 3</h2>
+<img src="images/Certificado AIDA3.jpg" alt="Certificado AIDA Nível 3 João Tubarão">
+<span>Certificação Internacional de Apneia</span>
+</div>
+
+<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre valores."
+class="cta" target="_blank">
+Informações sobre valores
+</a>
+
+</section>
+
+<footer class="footer">
+<p>&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
+<p>Desenvolvido por Luciane de Castro -
+<a href="mailto:luciane.castro@gmail.com">luciane.castro@gmail.com</a></p>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById('sideMenu').classList.toggle('active');
+document.getElementById('menuOverlay').classList.toggle('active');
+}
+
+const track=document.querySelector('.carousel-track');
+const slides=document.querySelectorAll('.carousel img');
+let index=0;
+
+function update(){
+track.style.transform=`translateX(-${index*100}%)`;
+}
+
+document.querySelector('.prev').onclick=()=>{
+index=index<=0?slides.length-1:index-1;
+update();
+};
+
+document.querySelector('.next').onclick=()=>{
+index=index>=slides.length-1?0:index+1;
+update();
+};
+</script>
+
+</body>
+</html>
