@@ -392,34 +392,10 @@ function toggleMenu(){
 document.getElementById('sideMenu').classList.toggle('active');
 document.getElementById('menuOverlay').classList.toggle('active');
 }
-
-const countdownElement = document.getElementById("countdown");
-const today = new Date();
-const year = today.getFullYear();
-const seasonStart = new Date(year, 6, 1);
-const seasonEnd = new Date(year, 9, 31);
-
-function updateCountdown(){
-const now = new Date();
-
-if(now < seasonStart){
-const diff = seasonStart - now;
-const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-countdownElement.innerHTML = "Temporada começa em " + days + " dias";
-}
-else if(now >= seasonStart && now <= seasonEnd){
-const diff = seasonEnd - now;
-const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-countdownElement.innerHTML = "Temporada termina em " + days + " dias";
-}
-else{
-countdownElement.innerHTML = "Temporada encerrada.";
-}
-}
-
-updateCountdown();
-setInterval(updateCountdown, 86400000);
 </script>
+
+<!-- Countdown unificado -->
+<script src="js/countdown-baleias.js"></script>
 
 </body>
 </html>

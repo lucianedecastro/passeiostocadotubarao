@@ -424,8 +424,8 @@ color:#c1cfdb;
 
 <section class="hero">
 <div>
-<h1>Relaxar, pescar ou surfar?</h1>
-<p>Escolha como viver o mar em Ubatuba</p>
+<h2>Escolha como viver o mar em Ubatuba:</h2>
+<h1>Passear, Pescar ou Surfar?</h1>
 </div>
 </section>
 
@@ -523,27 +523,6 @@ document.getElementById('sideMenu').classList.toggle('active');
 document.getElementById('menuOverlay').classList.toggle('active');
 }
 
-const startDate = new Date("June 1, 2026 00:00:00").getTime();
-const countdownEl = document.getElementById("countdown");
-
-function updateCountdown(){
-const now = new Date().getTime();
-const distance = startDate - now;
-
-if(distance < 0){
-countdownEl.innerHTML = "A temporada já começou!";
-return;
-}
-
-const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-countdownEl.innerHTML = `Faltam ${days} dias e ${hours} horas para o início da temporada 🐋`;
-}
-
-updateCountdown();
-setInterval(updateCountdown,60000);
-
 /* ===== CAROUSEL ORIGINAL ===== */
 
 const track=document.querySelector('.carousel-track');
@@ -553,6 +532,8 @@ function update(){track.style.transform=`translateX(-${index*100}%)`;}
 document.querySelector('.prev').onclick=()=>{index=index<=0?slides.length-1:index-1;update();}
 document.querySelector('.next').onclick=()=>{index=index>=slides.length-1?0:index+1;update();}
 </script>
+
+<script src="js/countdown-baleias.js"></script>
 
 </body>
 </html>
