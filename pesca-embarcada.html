@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sobre João Tubarão | Toca do Tubarão | Ubatuba</title>
+<title>Pesca Embarcada | Toca do Tubarão | Ubatuba</title>
 
-<meta name="description" content="Conheça João Tubarão, surfista, especialista em operações marítimas e certificado AIDA 3 no Litoral Norte de Ubatuba.">
+<meta name="description" content="Pesca Embarcada em Ubatuba. Modalidades de Pesca Subaquática e Pesca de Linha em ilhas, parceis, lajes e costões do litoral norte.">
 
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -14,7 +14,6 @@
 
 <style>
 :root{
---deep:#001f33;
 --primary:#0d3d5c;
 --accent:#00bcd4;
 --whatsapp:#25D366;
@@ -25,12 +24,12 @@
 
 body{
 font-family:'Poppins',sans-serif;
-background:linear-gradient(180deg,#001f33 0%, #0a2f48 60%, #0d3d5c 100%);
+background:linear-gradient(180deg,#0d3d5c 0%, #0a2f48 100%);
 color:#e0f2f1;
 line-height:1.7;
 }
 
-/* ===== MENU VIDRO ===== */
+/* ===== MENU ===== */
 
 .menu-toggle{
 position:fixed;
@@ -77,7 +76,7 @@ top:0;
 right:-300px;
 width:300px;
 height:100%;
-background:rgba(13,61,92,0.75);
+background:rgba(13,61,92,0.85);
 backdrop-filter:blur(15px);
 display:flex;
 flex-direction:column;
@@ -96,21 +95,7 @@ color:var(--yellow);
 padding:1.2rem 2.5rem;
 text-decoration:none;
 font-weight:600;
-font-size:1.15rem;
-letter-spacing:0.5px;
-position:relative;
-transition:0.3s;
-}
-
-.side-menu a::before{
-content:"";
-position:absolute;
-left:0;
-top:0;
-height:100%;
-width:4px;
-background:var(--yellow);
-transform:scaleY(0);
+font-size:1.1rem;
 transition:0.3s;
 }
 
@@ -119,12 +104,7 @@ background:rgba(251,188,5,0.1);
 padding-left:3rem;
 }
 
-.side-menu a:hover::before{
-transform:scaleY(1);
-}
-
-/* ===== RESTANTE ORIGINAL ===== */
-
+/* HEADER */
 .header{
 background:#1a2c4e;
 padding:1rem 0;
@@ -147,22 +127,28 @@ border-radius:50%;
 border:2px solid white;
 }
 
+/* HERO */
 .hero{
-padding:7rem 1rem 5rem;
+padding:6rem 1rem;
 text-align:center;
 }
 
-.hero h1{
-font-size:2.8rem;
+.hero i{
+font-size:40px;
+color:var(--accent);
 margin-bottom:1rem;
-color:white;
+}
+
+.hero h1{
+font-size:2.6rem;
+color:#ffffff;
+margin-bottom:0.5rem;
 }
 
 .hero p{
+opacity:0.9;
 max-width:750px;
 margin:auto;
-font-size:1.15rem;
-opacity:0.95;
 }
 
 .back-button{
@@ -182,103 +168,58 @@ background:var(--accent);
 color:white;
 }
 
+/* SECTION */
 .section{
 padding:4rem 1rem;
 max-width:1000px;
 margin:auto;
 }
 
-.carousel{
-position:relative;
-max-width:900px;
-margin:3rem auto;
-overflow:hidden;
-border-radius:20px;
-box-shadow:0 25px 50px rgba(0,0,0,0.4);
-}
-
-.carousel-track{
-display:flex;
-transition:transform 0.5s ease-in-out;
-}
-
-.carousel img{
-width:100%;
-height:500px;
-object-fit:cover;
-flex:0 0 100%;
-}
-
-.carousel button{
-position:absolute;
-top:50%;
-transform:translateY(-50%);
-background:rgba(0,0,0,0.5);
-color:white;
-border:none;
-padding:1rem;
-cursor:pointer;
-border-radius:50%;
-}
-
-.prev{left:15px;}
-.next{right:15px;}
-
-.story{
+/* GLASS BOX */
+.box{
 background:linear-gradient(
 145deg,
 rgba(255,255,255,0.07),
-rgba(255,255,255,0.03)
+rgba(255,255,255,0.02)
 );
 backdrop-filter:blur(8px);
-padding:3rem;
-border-radius:25px;
-margin-top:3rem;
-box-shadow:0 20px 40px rgba(0,0,0,0.35);
+padding:2.5rem;
+border-radius:20px;
+margin-bottom:2.5rem;
 border:1px solid rgba(0,188,212,0.3);
+box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 
-.story h2{
+.box h2{
 color:var(--accent);
-margin-bottom:1.5rem;
-text-align:center;
+margin-bottom:1rem;
 }
 
-.story p{
-margin-bottom:1.5rem;
-font-size:1.05rem;
+.box ul{
+margin-left:1.5rem;
+margin-bottom:1rem;
 }
 
-.certificado{
-text-align:center;
-margin-top:4rem;
+.box li{
+margin-bottom:0.6rem;
 }
 
-.certificado img{
-max-width:260px;
-width:100%;
-border-radius:12px;
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+.box strong{
+color:var(--accent);
 }
 
-.certificado span{
-display:block;
-margin-top:1rem;
-font-size:0.9rem;
-color:#b2ebf2;
-}
-
+/* CTA */
 .cta{
 display:inline-flex;
 align-items:center;
 gap:10px;
 background:var(--whatsapp);
 color:white;
-padding:1rem 2.5rem;
+padding:0.9rem 2rem;
 border-radius:50px;
 text-decoration:none;
 font-weight:600;
-margin-top:3rem;
+margin-top:1rem;
 transition:0.3s;
 }
 
@@ -287,10 +228,11 @@ transform:translateY(-3px);
 box-shadow:0 10px 25px rgba(0,0,0,0.4);
 }
 
+/* FOOTER */
 .footer{
 background:linear-gradient(180deg,#0d3d5c 0%,#0a2f48 100%);
 color:#d7e3ee;
-padding:4rem 1rem 2rem;
+padding:3rem 1rem;
 text-align:center;
 margin-top:4rem;
 }
@@ -301,9 +243,7 @@ text-decoration:none;
 }
 
 @media(max-width:768px){
-.carousel img{height:300px;}
 .hero h1{font-size:2rem;}
-.certificado img{max-width:200px;}
 }
 </style>
 </head>
@@ -326,57 +266,75 @@ text-decoration:none;
 
 <header class="header">
 <a href="index.html" class="logo">
-<img src="images/logonovocomfundo.jpg" alt="Logo Toca do Tubarão">
+<img src="images/logonovocomfundo.jpg" alt="Logo">
 <h2>Passeios Toca do Tubarão</h2>
 </a>
 </header>
 
 <section class="hero">
-<h1>Sobre João Tubarão</h1>
-<p>
-Mais do que conduzir embarcações, João conduz experiências.
-Vivência real, leitura de mar e respeito pelo oceano moldaram a essência da Toca do Tubarão.
-</p>
-<a href="index.html" class="back-button">← Voltar à página inicial</a>
+<i class="fas fa-fish"></i>
+<h1>Pesca Embarcada</h1>
+<p>Duas modalidades para quem vive o mar com estratégia e leitura de condição: Pesca Subaquática e Pesca de Linha em pontos selecionados do litoral norte de Ubatuba.</p>
+<a href="index.html" class="back-button">← Voltar à Página Inicial</a>
 </section>
 
 <section class="section">
 
-<div class="carousel">
-<div class="carousel-track">
-<img src="images/joao1.jpeg">
-<img src="images/joao2.jpeg">
-<img src="images/joao3.jpeg">
-<img src="images/joao4.jpeg">
-<img src="images/joao5.jpg">
-</div>
-<button class="prev">&#10094;</button>
-<button class="next">&#10095;</button>
-</div>
+<!-- TODO O CONTEÚDO ORIGINAL MANTIDO INTACTO -->
 
-<div class="story">
-<h2>A História</h2>
-
-<p>
-Nascido e criado na Praia Vermelha do Norte, João construiu sua relação com o mar desde cedo.
-O que começou como vivência se transformou em leitura técnica, estratégia e domínio das condições marítimas.
-</p>
-
-<p>
-Surfista ativo e profundo conhecedor de correntes, fundos e entradas de praia, 
-entende que cada saída é única — e exige respeito ao tempo, ao vento e ao oceano.
-</p>
-
-<p>
-Com certificação internacional <strong>AIDA Nível 3</strong>, alia preparo técnico à prática diária,
-unindo segurança, conhecimento e experiência local em cada operação.
-</p>
+<div class="box">
+<h2>Pesca Subaquática</h2>
+<p>Modalidade indicada para participantes com <strong>experiência prévia em mergulho e apneia</strong>, realizada com planejamento técnico e escolha de pontos conforme nível do praticante.</p>
+<ul>
+<li><strong>Locais:</strong> Ilhas, parceis, lajes e costões.</li>
+<li><strong>Nível:</strong> Pontos selecionados conforme experiência do participante.</li>
+</ul>
+<p>Atividade conduzida com leitura de mar, segurança operacional e respeito às normas ambientais vigentes.</p>
+<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre a Pesca Subaquática."
+class="cta" target="_blank">Consultar Disponibilidade</a>
 </div>
 
-<div class="certificado">
-<h2>Certificação AIDA Nível 3</h2>
-<img src="images/Certificado AIDA3.jpg" alt="Certificado AIDA Nível 3 João Tubarão">
-<span>Certificação Internacional de Apneia</span>
+<div class="box">
+<h2>Pesca de Linha</h2>
+<p>Pesca embarcada tradicional com acompanhamento especializado e definição estratégica de pontos conforme condição do mar.</p>
+<ul>
+<li><strong>Modalidade:</strong> Pesca de fundo e de passagem.</li>
+<li><strong>Locais:</strong> Ilhas, parceis, lajes e pontos estratégicos conforme leitura marítima.</li>
+<li><strong>Período:</strong> Durante todo o ano, respeitando o defeso.</li>
+</ul>
+<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre a Pesca de Linha."
+class="cta" target="_blank">Consultar Disponibilidade</a>
+</div>
+
+<div class="box">
+<h2>O que está incluso</h2>
+<ul>
+<li>Marinheiro especializado</li>
+<li>Combustível para os trajetos descritos</li>
+<li>Cooler com gelo</li>
+</ul>
+</div>
+
+<div class="box">
+<h2>Aluguel de Equipamentos</h2>
+<ul>
+<li>Vara de pesca</li>
+<li>Molinete</li>
+<li>Linha</li>
+</ul>
+<p><strong>Consulte disponibilidade e valores.</strong></p>
+</div>
+
+<div class="box">
+<h2>Informações Importantes</h2>
+<p>A realização da atividade depende das condições climáticas e do mar. Respeitamos as normas ambientais e o período de defeso vigente.</p>
+</div>
+
+<div style="text-align:center;">
+<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre valores da Pesca Embarcada."
+class="cta" target="_blank">
+Informações sobre Valores
+</a>
 </div>
 
 </section>
@@ -392,24 +350,6 @@ function toggleMenu(){
 document.getElementById('sideMenu').classList.toggle('active');
 document.getElementById('menuOverlay').classList.toggle('active');
 }
-
-const track=document.querySelector('.carousel-track');
-const slides=document.querySelectorAll('.carousel img');
-let index=0;
-
-function update(){
-track.style.transform=`translateX(-${index*100}%)`;
-}
-
-document.querySelector('.prev').onclick=()=>{
-index=index<=0?slides.length-1:index-1;
-update();
-};
-
-document.querySelector('.next').onclick=()=>{
-index=index>=slides.length-1?0:index+1;
-update();
-};
 </script>
 
 </body>

@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Central de Experiências Toca do Tubarão | Ubatuba</title>
+<title>Passeios Toca do Tubarão | Ubatuba</title>
 
-<meta name="description" content="Central de Experiências Toca do Tubarão. Do turismo contemplativo ao Acesso Estratégico ao Mar. Escolha como viver o mar em Ubatuba.">
+<meta name="description" content="Passeios Toca do Tubarão. Turismo Náutico, Pesca Embarcada e experiências em busca da onda perfeita. Escolha como viver o mar em Ubatuba.">
 
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -87,9 +87,7 @@ z-index:1500;
 box-shadow:-10px 0 40px rgba(0,0,0,0.4);
 }
 
-.side-menu.active{
-right:0;
-}
+.side-menu.active{ right:0; }
 
 .side-menu a{
 color:var(--yellow);
@@ -123,7 +121,7 @@ padding-left:3rem;
 transform:scaleY(1);
 }
 
-/* ===== RESTANTE DO CSS ORIGINAL ===== */
+/* ===== HEADER ===== */
 
 .header{
 background:#1a2c4e;
@@ -147,6 +145,8 @@ height:50px;
 border-radius:50%;
 border:2px solid white;
 }
+
+/* ===== HERO ===== */
 
 .hero{
 height:85vh;
@@ -174,6 +174,8 @@ margin:auto;
 opacity:0.95;
 }
 
+/* ===== SECTION ===== */
+
 .section{
 padding:5rem 1rem;
 text-align:center;
@@ -187,6 +189,8 @@ margin-bottom:2rem;
 color:var(--primary);
 font-weight:600;
 }
+
+/* ===== HUB ===== */
 
 .hub-options{
 display:flex;
@@ -216,17 +220,75 @@ justify-content:center;
 gap:10px;
 }
 
-.hub-card:hover{
-transform:translateY(-10px);
+.hub-card:hover{ transform:translateY(-10px); }
+
+.nautico{ background:linear-gradient(135deg,#00bcd4,#42e0f5); }
+.pesca{ background:linear-gradient(135deg,#00695c,#009688); }
+.surf{ background:linear-gradient(135deg,#001f33,#003f5c); }
+
+/* ===== DESTAQUES ===== */
+
+.destaques-title{
+font-size:2.2rem;
+margin-top:5rem;
+margin-bottom:3rem;
+color:var(--yellow);
+font-weight:700;
 }
 
-.nautico{
-background:linear-gradient(135deg,#00bcd4,#42e0f5);
+.destaques{
+display:flex;
+gap:2.5rem;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.surf{
-background:linear-gradient(135deg,#001f33,#003f5c);
+.destaque-card{
+flex:1;
+min-width:300px;
+max-width:520px;
+height:420px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+position:relative;
+overflow:hidden;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+padding:2.5rem;
+transition:0.4s;
+box-shadow:0 30px 60px rgba(0,0,0,0.25);
+background-size:cover;
+background-position:center;
 }
+
+.destaque-card::before{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.3));
+}
+
+.destaque-card:hover{
+transform:translateY(-12px) scale(1.02);
+}
+
+.destaque-content{
+position:relative;
+z-index:2;
+}
+
+.countdown{
+margin-top:1.5rem;
+font-size:1.2rem;
+font-weight:600;
+background:rgba(255,255,255,0.15);
+padding:1rem;
+border-radius:15px;
+}
+
+/* ===== CAROUSEL / SOCIAL / GOOGLE / FOOTER ===== */
 
 .carousel{
 position:relative;
@@ -237,10 +299,7 @@ border-radius:20px;
 box-shadow:0 25px 50px rgba(0,0,0,0.15);
 }
 
-.carousel-track{
-display:flex;
-transition:transform 0.5s ease-in-out;
-}
+.carousel-track{ display:flex; transition:transform 0.5s ease-in-out; }
 
 .carousel img{
 width:100%;
@@ -272,14 +331,8 @@ gap:2rem;
 font-size:28px;
 }
 
-.social-links a{
-color:var(--primary);
-transition:0.3s;
-}
-
-.social-links a:hover{
-color:var(--sea);
-}
+.social-links a{ color:var(--primary); transition:0.3s; }
+.social-links a:hover{ color:var(--sea); }
 
 .google-review{
 margin-top:4rem;
@@ -291,16 +344,6 @@ box-shadow:0 20px 40px rgba(0,0,0,0.15);
 max-width:700px;
 margin-left:auto;
 margin-right:auto;
-}
-
-.google-review h3{
-margin-bottom:1rem;
-font-size:1.5rem;
-}
-
-.google-review p{
-opacity:0.9;
-margin-bottom:2rem;
 }
 
 .btn-google{
@@ -326,16 +369,6 @@ color:#d7e3ee;
 padding:4rem 1rem 2rem;
 text-align:center;
 margin-top:4rem;
-}
-
-.footer h4{
-color:white;
-margin-bottom:1rem;
-}
-
-.footer a{
-color:#e6eef6;
-text-decoration:none;
 }
 
 .qr-block{
@@ -377,7 +410,8 @@ color:#c1cfdb;
 <nav class="side-menu" id="sideMenu">
 <a href="index.html">Início</a>
 <a href="turismo-nautico.html">Turismo Náutico</a>
-<a href="acesso-estrategico-mar.html">Acesso Estratégico ao Mar</a>
+<a href="pesca-embarcada.html">Pesca Embarcada</a>
+<a href="onda-perfeita.html">Em Busca da Onda Perfeita</a>
 <a href="sobre.html">Sobre</a>
 </nav>
 
@@ -390,7 +424,7 @@ color:#c1cfdb;
 
 <section class="hero">
 <div>
-<h1>Para relaxar, pescar ou surfar</h1>
+<h1>Relaxar, pescar ou surfar?</h1>
 <p>Escolha como viver o mar em Ubatuba</p>
 </div>
 </section>
@@ -405,10 +439,39 @@ color:#c1cfdb;
 <p>Experiências contemplativas com águas cristalinas e paisagens preservadas</p>
 </a>
 
-<a href="acesso-estrategico-mar.html" class="hub-card surf">
-<h3><i class="fas fa-water"></i> Acesso Estratégico ao Mar</h3>
-<p>Surf e Sea Access com logística esportiva para quem vive o mar</p>
+<a href="pesca-embarcada.html" class="hub-card pesca">
+<h3><i class="fas fa-fish"></i> Pesca Embarcada</h3>
+<p>Pesca Subaquática e Pesca de Linha em pontos estratégicos do litoral</p>
 </a>
+
+<a href="onda-perfeita.html" class="hub-card surf">
+<h3><i class="fas fa-water"></i> Em Busca da Onda Perfeita</h3>
+<p>Drop no Outside com logística especializada para surfistas</p>
+</a>
+</div>
+
+<h2 class="destaques-title">Destaques</h2>
+
+<div class="destaques">
+
+<a href="pesca-embarcada.html"
+class="destaque-card"
+style="background-image:url('images/pesca-embarcada.webp');">
+<div class="destaque-content">
+<h3><i class="fas fa-fish"></i> Pesca Embarcada</h3>
+<p>Subaquática ou de linha. Ilhas, parceis, lajes e costões.</p>
+</div>
+</a>
+
+<a href="observacao-baleias.html"
+class="destaque-card"
+style="background-image:url('images/baleia.webp');">
+<div class="destaque-content">
+<h3><i class="fas fa-whale"></i> Observação de Baleias</h3>
+<div class="countdown" id="countdown"></div>
+</div>
+</a>
+
 </div>
 
 <div class="carousel">
@@ -429,7 +492,6 @@ color:#c1cfdb;
 
 <div class="google-review">
 <h3>Avalie nossa empresa no Google</h3>
-
 <a href="https://www.google.com/maps/place//data=!4m3!3m2!1s0x872bc3d379d1de75:0xb5b5a9420a1fb9f9!12e1?source=g.page.m._&laa=merchant-review-solicitation"
 target="_blank" class="btn-google">
 <i class="fas fa-star"></i> Avaliar no Google
@@ -460,6 +522,29 @@ function toggleMenu(){
 document.getElementById('sideMenu').classList.toggle('active');
 document.getElementById('menuOverlay').classList.toggle('active');
 }
+
+const startDate = new Date("June 1, 2026 00:00:00").getTime();
+const countdownEl = document.getElementById("countdown");
+
+function updateCountdown(){
+const now = new Date().getTime();
+const distance = startDate - now;
+
+if(distance < 0){
+countdownEl.innerHTML = "A temporada já começou!";
+return;
+}
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+countdownEl.innerHTML = `Faltam ${days} dias e ${hours} horas para o início da temporada 🐋`;
+}
+
+updateCountdown();
+setInterval(updateCountdown,60000);
+
+/* ===== CAROUSEL ORIGINAL ===== */
 
 const track=document.querySelector('.carousel-track');
 const slides=document.querySelectorAll('.carousel img');
