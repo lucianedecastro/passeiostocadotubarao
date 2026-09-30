@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var f=localStorage.getItem("ttfont");if(f)document.documentElement.style.fontSize=f+"%";if(localStorage.getItem("tthc")==="1")document.documentElement.classList.add("tt-hc");}catch(e){}})();</script>
 
-<title>Drop no Outside | Em Busca da Onda Perfeita | Toca do Tubarão</title>
+<title data-i18n="drop_title">Drop no Outside | Em Busca da Onda Perfeita | Toca do Tubarão</title>
 
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8JJEB8HJL"></script>
   <script src="/js/analytics.js"></script>
 
-<meta name="description" content="Drop no Outside em Ubatuba. Transporte marítimo estratégico para surfistas que buscam acesso a picos expostos e ativados por swell durante todo o ano.">
+<meta name="description" data-i18n="drop_desc" data-i18n-attr="content" content="Drop no Outside em Ubatuba. Transporte marítimo estratégico para surfistas que buscam acesso a picos expostos e ativados por swell durante todo o ano.">
 
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="images/favicon-180x180.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -53,6 +55,8 @@ width:50px;
 height:50px;
 border-radius:50%;
 border:2px solid white;
+object-fit:contain;
+background:#fff;
 }
 
 /* HERO */
@@ -195,24 +199,25 @@ text-decoration:none;
 .gallery img{height:250px;}
 }
 </style>
+<link rel="stylesheet" href="css/acessibilidade.css">
 </head>
 
 <body>
 
 <header class="header">
 <a href="index.html" class="logo">
-<img src="images/logonovocomfundo.jpg">
-<h2>Passeios Toca do Tubarão</h2>
+<img src="images/logo-icone.png" alt="Logo Toca do Tubarão" data-i18n="sh_logo_alt" data-i18n-attr="alt">
+<h2 data-i18n="sh_brand">Passeios Toca do Tubarão</h2>
 </a>
 </header>
 
-<section class="hero">
-<h1>Drop no Outside</h1>
-<p>Operação marítima direcionada a lajes e picos expostos ativados por swell consistente.</p>
-<a href="onda-perfeita.html" class="back-button">← Voltar para Em Busca da Onda Perfeita</a>
+<section class="hero" id="conteudo" tabindex="-1">
+<h1 data-i18n="drop_h1">Drop no Outside</h1>
+<p data-i18n="drop_p">Operação marítima direcionada a lajes e picos expostos ativados por swell consistente.</p>
+<a href="onda-perfeita.html" class="back-button" data-i18n="sh_back_onda">← Voltar para Em Busca da Onda Perfeita</a>
 </section>
 
-<div class="impact">
+<div class="impact" data-i18n="drop_impact">
 Quando o gráfico acende, a operação entra.
 </div>
 
@@ -225,57 +230,58 @@ Quando o gráfico acende, a operação entra.
 <section class="section">
 
 <div class="content-box">
-<h2>Leitura de Condição</h2>
+<h2 data-i18n="drop_b1_h">Leitura de Condição</h2>
 
-<p>
+<p data-i18n="drop_b1_p1">
 A ativação da operação depende da análise técnica combinada de múltiplos fatores.
 Não é apenas sobre tamanho — é sobre alinhamento de vetores.
 </p>
 
 <ul>
-<li>Swell consistente e período adequado</li>
-<li>Direção favorável para ativação de lajes e picos expostos</li>
-<li>Leitura precisa de vento e janelas de calmaria</li>
-<li>Influência da maré no comportamento da onda</li>
-<li>Corrente e deslocamento marítimo</li>
+<li data-i18n="drop_b1_l1">Swell consistente e período adequado</li>
+<li data-i18n="drop_b1_l2">Direção favorável para ativação de lajes e picos expostos</li>
+<li data-i18n="drop_b1_l3">Leitura precisa de vento e janelas de calmaria</li>
+<li data-i18n="drop_b1_l4">Influência da maré no comportamento da onda</li>
+<li data-i18n="drop_b1_l5">Corrente e deslocamento marítimo</li>
 </ul>
 
-<p>
+<p data-i18n="drop_b1_p2">
 Quando as condições convergem, a operação entra.
 </p>
 </div>
 
 <div class="content-box">
-<h2>Como Funciona</h2>
+<h2 data-i18n="drop_b2_h">Como Funciona</h2>
 
 <ul>
-<li>Definição do pico conforme condição do mar</li>
-<li>Análise técnica de vento, maré e corrente</li>
-<li>Drop em ponto seguro e estratégico</li>
-<li>Retorno programado conforme janela ideal</li>
-<li>Ajuste dinâmico conforme leitura de swell</li>
+<li data-i18n="drop_b2_l1">Definição do pico conforme condição do mar</li>
+<li data-i18n="drop_b2_l2">Análise técnica de vento, maré e corrente</li>
+<li data-i18n="drop_b2_l3">Drop em ponto seguro e estratégico</li>
+<li data-i18n="drop_b2_l4">Retorno programado conforme janela ideal</li>
+<li data-i18n="drop_b2_l5">Ajuste dinâmico conforme leitura de swell</li>
 </ul>
 
-<p>
+<p data-i18n="drop_b2_p">
 Operação voltada a surfistas experientes que buscam acesso inteligente,
 timing preciso e estratégia marítima aplicada à performance.
 </p>
 
-<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre o Drop no Outside."
+<a data-i18n-wa="drop_wa_msg" href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre o Drop no Outside."
 class="cta" target="_blank">
-Informações sobre Valores
+<span data-i18n="sh_cta_valores">Informações sobre Valores</span>
 </a>
 </div>
 
-<p class="aviso-roteiro">*A operação depende das condições de navegação e leitura técnica do mar.</p>
+<p class="aviso-roteiro" data-i18n="drop_aviso">*A operação depende das condições de navegação e leitura técnica do mar.</p>
 
 </section>
 
 <footer class="footer">
-<p>&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
-<p>Desenvolvido por Luciane de Castro -
+<p data-i18n="sh_footer_rights">&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
+<p><span data-i18n="sh_footer_dev">Desenvolvido por Luciane de Castro -</span>
 <a href="mailto:luciane.castro@gmail.com">luciane.castro@gmail.com</a></p>
 </footer>
 
+<script src="js/i18n.js"></script>
 </body>
 </html>

@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var f=localStorage.getItem("ttfont");if(f)document.documentElement.style.fontSize=f+"%";if(localStorage.getItem("tthc")==="1")document.documentElement.classList.add("tt-hc");}catch(e){}})();</script>
 
-<title>Passeios Toca do Tubarão | Ubatuba</title>
+<title data-i18n="idx_title">Passeios Toca do Tubarão | Ubatuba</title>
 
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8JJEB8HJL"></script>
   <script src="/js/analytics.js"></script>
 
-<meta name="description" content="Passeios Toca do Tubarão. Turismo Náutico, Pesca Embarcada e experiências em busca da onda perfeita. Escolha como viver o mar em Ubatuba.">
+<meta name="description" data-i18n="idx_desc" data-i18n-attr="content" content="Passeios Toca do Tubarão. Turismo Náutico, Pesca Embarcada e experiências em busca da onda perfeita. Escolha como viver o mar em Ubatuba.">
 
 <!-- ===== Open Graph ===== -->
 <meta property="og:title" content="Passeios Toca do Tubarão | Ubatuba">
@@ -474,63 +475,64 @@ color:#c1cfdb;
 .destaque-card{height:300px;padding:1.6rem;}
 }
 </style>
+<link rel="stylesheet" href="css/acessibilidade.css">
 </head>
 
 <body>
 
-<div class="menu-toggle" onclick="toggleMenu()">
-<i class="fas fa-bars"></i>
+<div class="menu-toggle" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu" data-i18n="ui_menu" data-i18n-attr="aria-label" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}">
+<i class="fas fa-bars" aria-hidden="true"></i>
 </div>
 
 <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
-<nav class="side-menu" id="sideMenu">
-<a href="index.html">Início</a>
-<a href="turismo-nautico.html">Turismo Náutico</a>
-<a href="pesca-embarcada.html">Pesca Embarcada</a>
-<a href="onda-perfeita.html">Em Busca da Onda Perfeita</a>
-<a href="sobre.html">Sobre</a>
+<nav class="side-menu" id="sideMenu" aria-label="Menu">
+<a href="index.html" data-i18n="sh_nav_inicio">Início</a>
+<a href="turismo-nautico.html" data-i18n="sh_nav_turismo">Turismo Náutico</a>
+<a href="pesca-embarcada.html" data-i18n="sh_nav_pesca">Pesca Embarcada</a>
+<a href="onda-perfeita.html" data-i18n="sh_nav_onda">Em Busca da Onda Perfeita</a>
+<a href="sobre.html" data-i18n="sh_nav_sobre">Sobre</a>
 </nav>
 
 <header class="header">
 <a href="index.html" class="logo">
-<img src="images/logo-icone.png" alt="Logo Toca do Tubarão">
-<h2>Passeios Toca do Tubarão</h2>
+<img src="images/logo-icone.png" alt="Logo Toca do Tubarão" data-i18n="sh_logo_alt" data-i18n-attr="alt">
+<h2 data-i18n="sh_brand">Passeios Toca do Tubarão</h2>
 </a>
 </header>
 
-<section class="hero">
+<section class="hero" id="conteudo" tabindex="-1">
 <div>
-<h2>Escolha como viver o mar em Ubatuba</h2>
-<h1>Passear | Pescar | Surfar</h1>
-<a href="https://wa.me/5512996450379?text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20um%20passeio%20com%20a%20Toca%20do%20Tubar%C3%A3o." class="btn-whatsapp-hero" target="_blank" rel="noopener">
-<i class="fab fa-whatsapp"></i> Reserve Agora
+<h2 data-i18n="idx_hero_sub">Escolha como viver o mar em Ubatuba</h2>
+<h1 data-i18n="idx_hero_title">Passear | Pescar | Surfar</h1>
+<a href="https://wa.me/5512996450379?text=Ol%C3%A1%21%20Gostaria%20de%20reservar%20um%20passeio%20com%20a%20Toca%20do%20Tubar%C3%A3o." class="btn-whatsapp-hero" data-i18n-wa="idx_wa_reserve" target="_blank" rel="noopener">
+<i class="fab fa-whatsapp" aria-hidden="true"></i> <span data-i18n="idx_cta_reserve">Reserve Agora</span>
 </a>
 </div>
 </section>
 
 <section class="section">
 
-<h2 class="section-title">Qual experiência você quer viver?</h2>
+<h2 class="section-title" data-i18n="idx_q">Qual experiência você quer viver?</h2>
 
 <div class="hub-options">
 <a href="turismo-nautico.html" class="hub-card nautico">
-<h3><i class="fas fa-ship"></i> Turismo Náutico</h3>
-<p>Experiências contemplativas com águas cristalinas e paisagens preservadas</p>
+<h3><i class="fas fa-ship" aria-hidden="true"></i> <span data-i18n="sh_nav_turismo">Turismo Náutico</span></h3>
+<p data-i18n="idx_card_naut_p">Experiências contemplativas com águas cristalinas e paisagens preservadas</p>
 </a>
 
 <a href="pesca-embarcada.html" class="hub-card pesca">
-<h3><i class="fas fa-fish"></i> Pesca Embarcada</h3>
-<p>Pesca Subaquática e Pesca de Linha em pontos estratégicos do litoral</p>
+<h3><i class="fas fa-fish" aria-hidden="true"></i> <span data-i18n="sh_nav_pesca">Pesca Embarcada</span></h3>
+<p data-i18n="idx_card_pesca_p">Pesca Subaquática e Pesca de Linha em pontos estratégicos do litoral</p>
 </a>
 
 <a href="onda-perfeita.html" class="hub-card surf">
-<h3><i class="fas fa-water"></i> Em Busca da Onda Perfeita</h3>
-<p>Drop no Outside com logística especializada para surfistas</p>
+<h3><i class="fas fa-water" aria-hidden="true"></i> <span data-i18n="sh_nav_onda">Em Busca da Onda Perfeita</span></h3>
+<p data-i18n="idx_card_onda_p">Drop no Outside com logística especializada para surfistas</p>
 </a>
 </div>
 
-<h2 class="destaques-title">Destaques</h2>
+<h2 class="destaques-title" data-i18n="idx_destaques">Destaques</h2>
 
 <div class="destaques">
 
@@ -538,8 +540,8 @@ color:#c1cfdb;
 class="destaque-card"
 style="background-image:url('images/pesca-embarcada.webp');">
 <div class="destaque-content">
-<h3><i class="fas fa-fish"></i> Pesca Embarcada</h3>
-<p>Subaquática ou de linha. Ilhas, parceis, lajes e costões.</p>
+<h3><i class="fas fa-fish" aria-hidden="true"></i> <span data-i18n="sh_nav_pesca">Pesca Embarcada</span></h3>
+<p data-i18n="idx_dest_pesca_p">Subaquática ou de linha. Ilhas, parceis, lajes e costões.</p>
 </div>
 </a>
 
@@ -547,7 +549,7 @@ style="background-image:url('images/pesca-embarcada.webp');">
 class="destaque-card"
 style="background-image:url('images/baleia.webp');">
 <div class="destaque-content">
-<h3><i class="fas fa-whale"></i> Observação de Baleias</h3>
+<h3><i class="fas fa-whale" aria-hidden="true"></i> <span data-i18n="idx_dest_baleia_h">Observação de Baleias</span></h3>
 <div class="countdown" id="countdown"></div>
 </div>
 </a>
@@ -556,45 +558,45 @@ style="background-image:url('images/baleia.webp');">
 
 <div class="carousel">
 <div class="carousel-track">
-<div class="carousel-slide"><img src="images/Foto_02.webp" alt="Passeio Toca do Tubarão"></div>
-<div class="carousel-slide"><img src="images/lanchatubarao10.JPG" alt="Lancha Toca do Tubarão"></div>
-<div class="carousel-slide"><img src="images/Foto_03.webp" alt="Passeio Toca do Tubarão" style="object-position:center 90%"></div>
-<div class="carousel-slide"><img src="images/lanchatubarao12.JPG" alt="Lancha Toca do Tubarão"></div>
-<div class="carousel-slide"><img src="images/Foto_04.webp" alt="Passeio Toca do Tubarão"></div>
-<div class="carousel-slide"><img src="images/lanchatubarao13.JPG" alt="Lancha Toca do Tubarão"></div>
+<div class="carousel-slide"><img src="images/Foto_02.webp" alt="Passeio Toca do Tubarão" data-i18n="idx_alt_passeio" data-i18n-attr="alt"></div>
+<div class="carousel-slide"><img src="images/lanchatubarao10.JPG" alt="Lancha Toca do Tubarão" data-i18n="idx_alt_lancha" data-i18n-attr="alt"></div>
+<div class="carousel-slide"><img src="images/Foto_03.webp" alt="Passeio Toca do Tubarão" data-i18n="idx_alt_passeio" data-i18n-attr="alt" style="object-position:center 90%"></div>
+<div class="carousel-slide"><img src="images/lanchatubarao12.JPG" alt="Lancha Toca do Tubarão" data-i18n="idx_alt_lancha" data-i18n-attr="alt"></div>
+<div class="carousel-slide"><img src="images/Foto_04.webp" alt="Passeio Toca do Tubarão" data-i18n="idx_alt_passeio" data-i18n-attr="alt"></div>
+<div class="carousel-slide"><img src="images/lanchatubarao13.JPG" alt="Lancha Toca do Tubarão" data-i18n="idx_alt_lancha" data-i18n-attr="alt"></div>
 </div>
-<button class="prev">&#10094;</button>
-<button class="next">&#10095;</button>
+<button class="prev" aria-label="Slide anterior" data-i18n="ui_prev" data-i18n-attr="aria-label">&#10094;</button>
+<button class="next" aria-label="Próximo slide" data-i18n="ui_next" data-i18n-attr="aria-label">&#10095;</button>
 </div>
 
 <div class="social-links">
-<a href="https://wa.me/5512996450379" target="_blank"><i class="fab fa-whatsapp"></i></a>
-<a href="https://www.instagram.com/passeiostocadotubarao/" target="_blank"><i class="fab fa-instagram"></i></a>
+<a href="https://wa.me/5512996450379" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+<a href="https://www.instagram.com/passeiostocadotubarao/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
 </div>
 
 <div class="google-review">
-<h3>Avalie nossa empresa no Google</h3>
+<h3 data-i18n="idx_google_h">Avalie nossa empresa no Google</h3>
 <a href="https://www.google.com/maps/place//data=!4m3!3m2!1s0x872bc3d379d1de75:0xb5b5a9420a1fb9f9!12e1?source=g.page.m._&laa=merchant-review-solicitation"
 target="_blank" class="btn-google">
-<i class="fas fa-star"></i> Avaliar no Google
+<i class="fas fa-star" aria-hidden="true"></i> <span data-i18n="idx_google_btn">Avaliar no Google</span>
 </a>
 </div>
 
 </section>
 
 <footer class="footer">
-<h4>Empresa Certificada</h4>
-<p>Cadastro Cadastur</p>
+<h4 data-i18n="idx_cert_h">Empresa Certificada</h4>
+<p data-i18n="idx_cadastur">Cadastro Cadastur</p>
 
 <div class="qr-block">
-<img src="images/QRCode Cadastur.jpg" alt="QR Code Consulta Cadastur">
-<span>Escaneie para consultar no Cadastur</span>
+<img src="images/QRCode Cadastur.jpg" alt="QR Code Consulta Cadastur" data-i18n="idx_alt_qr" data-i18n-attr="alt">
+<span data-i18n="idx_qr_span">Escaneie para consultar no Cadastur</span>
 </div>
 
-<p>&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados</p>
+<p data-i18n="sh_footer_rights">&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados</p>
 
 <p>
-Desenvolvido por Luciane de Castro -
+<span data-i18n="sh_footer_dev">Desenvolvido por Luciane de Castro -</span>
 <a href="mailto:luciane.castro@gmail.com">luciane.castro@gmail.com</a>
 </p>
 </footer>
@@ -615,6 +617,9 @@ document.querySelector('.prev').onclick=()=>{index=index<=0?slides.length-1:inde
 document.querySelector('.next').onclick=()=>{index=index>=slides.length-1?0:index+1;update();}
 </script>
 
+<!-- Idioma + Acessibilidade -->
+<script src="js/i18n.js"></script>
+<!-- Countdown baleias (multilíngue) -->
 <script src="js/countdown-baleias.js"></script>
 
 </body>

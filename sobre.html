@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var f=localStorage.getItem("ttfont");if(f)document.documentElement.style.fontSize=f+"%";if(localStorage.getItem("tthc")==="1")document.documentElement.classList.add("tt-hc");}catch(e){}})();</script>
 
-<title>Sobre João Tubarão | Toca do Tubarão | Ubatuba</title>
+<title data-i18n="sobre_title">Sobre João Tubarão | Toca do Tubarão | Ubatuba</title>
 
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8JJEB8HJL"></script>
   <script src="/js/analytics.js"></script>
 
-<meta name="description" content="Conheça João Tubarão, surfista, especialista em operações marítimas e certificado AIDA 3 no Litoral Norte de Ubatuba.">
+<meta name="description" data-i18n="sobre_desc" data-i18n-attr="content" content="Conheça João Tubarão, surfista, especialista em operações marítimas e certificado AIDA 3 no Litoral Norte de Ubatuba.">
 
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
 <link rel="apple-touch-icon" href="images/favicon-180x180.png">
@@ -293,63 +294,64 @@ text-decoration:none;
 .marinheiro-grid{grid-template-columns:1fr;}
 }
 </style>
+<link rel="stylesheet" href="css/acessibilidade.css">
 </head>
 
 <body>
 
-<div class="menu-toggle" onclick="toggleMenu()">
+<div class="menu-toggle" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu" data-i18n="ui_menu" data-i18n-attr="aria-label" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}">
 <i class="fas fa-bars"></i>
 </div>
 
 <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
 <nav class="side-menu" id="sideMenu">
-<a href="index.html">Início</a>
-<a href="turismo-nautico.html">Turismo Náutico</a>
-<a href="pesca-embarcada.html">Pesca Embarcada</a>
-<a href="onda-perfeita.html">Em Busca da Onda Perfeita</a>
-<a href="sobre.html">Sobre</a>
+<a href="index.html" data-i18n="sh_nav_inicio">Início</a>
+<a href="turismo-nautico.html" data-i18n="sh_nav_turismo">Turismo Náutico</a>
+<a href="pesca-embarcada.html" data-i18n="sh_nav_pesca">Pesca Embarcada</a>
+<a href="onda-perfeita.html" data-i18n="sh_nav_onda">Em Busca da Onda Perfeita</a>
+<a href="sobre.html" data-i18n="sh_nav_sobre">Sobre</a>
 </nav>
 
 <header class="header">
 <a href="index.html" class="logo">
-<img src="images/logo-icone.png" alt="Logo Toca do Tubarão">
-<h2>Passeios Toca do Tubarão</h2>
+<img src="images/logo-icone.png" alt="Logo Toca do Tubarão" data-i18n="sh_logo_alt" data-i18n-attr="alt">
+<h2 data-i18n="sh_brand">Passeios Toca do Tubarão</h2>
 </a>
 </header>
 
-<section class="hero">
-<h1>Sobre João Tubarão</h1>
-<p>
+<section class="hero" id="conteudo" tabindex="-1">
+<h1 data-i18n="sobre_h1">Sobre João Tubarão</h1>
+<p data-i18n="sobre_p">
 Mais do que conduzir embarcações, João conduz experiências.
 Vivência real, leitura de mar e respeito pelo oceano moldaram a essência da Toca do Tubarão.
 </p>
-<a href="index.html" class="back-button">← Voltar à página inicial</a>
+<a href="index.html" class="back-button" data-i18n="sh_back_home">← Voltar à página inicial</a>
 </section>
 
 <section class="section">
 
 <div class="story">
-<h2>Nosso Marinheiro</h2>
-<p>
+<h2 data-i18n="sobre_s1_h">Nosso Marinheiro</h2>
+<p data-i18n="sobre_s1_p">
 Nascido e criado na Praia Vermelha do Norte, Ubatuba, João construiu sua
 relação com o mar desde muito novo. O que começou como vivência virou
 domínio. Segurança e experiência em cada saída para o mar.
 </p>
 
 <div class="marinheiro-grid">
-<div class="qual-card"><i class="fas fa-house"></i><span>Caiçara</span></div>
-<div class="qual-card"><i class="fas fa-fish"></i><span>Pescador Submarino</span></div>
-<div class="qual-card"><i class="fas fa-anchor"></i><span>Marinheiro MAC+ESEP</span></div>
-<div class="qual-card"><i class="fas fa-life-ring"></i><span>Ex-militar - especialista em busca e salvamento</span></div>
-<div class="qual-card"><i class="fas fa-water"></i><span>Surfista</span></div>
-<div class="qual-card"><i class="fas fa-medal"></i><span>Mergulhador de apneia - certificação internacional AIDA 3</span></div>
+<div class="qual-card"><i class="fas fa-house"></i><span data-i18n="sobre_q1">Caiçara</span></div>
+<div class="qual-card"><i class="fas fa-fish"></i><span data-i18n="sobre_q2">Pescador Submarino</span></div>
+<div class="qual-card"><i class="fas fa-anchor"></i><span data-i18n="sobre_q3">Marinheiro MAC+ESEP</span></div>
+<div class="qual-card"><i class="fas fa-life-ring"></i><span data-i18n="sobre_q4">Ex-militar - especialista em busca e salvamento</span></div>
+<div class="qual-card"><i class="fas fa-water"></i><span data-i18n="sobre_q5">Surfista</span></div>
+<div class="qual-card"><i class="fas fa-medal"></i><span data-i18n="sobre_q6">Mergulhador de apneia - certificação internacional AIDA 3</span></div>
 </div>
 </div>
 
 <div class="story">
-<h2>A Embarcação</h2>
-<p>
+<h2 data-i18n="sobre_s2_h">A Embarcação</h2>
+<p data-i18n="sobre_s2_p">
 Embarcação modelo estaleiro Panga de 17 pés, com comando central, robusta e
 estável, equipada com motor Yamaha 4 tempos de 60HP, revisado periodicamente
 conforme o padrão indicado pelo tempo de uso. Assim garantimos passeios
@@ -360,8 +362,8 @@ tranquilos e seguros — do embarque ao desembarque.
 </section>
 
 <footer class="footer">
-<p>&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
-<p>Desenvolvido por Luciane de Castro -
+<p data-i18n="sh_footer_rights">&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
+<p><span data-i18n="sh_footer_dev">Desenvolvido por Luciane de Castro -</span>
 <a href="mailto:luciane.castro@gmail.com">luciane.castro@gmail.com</a></p>
 </footer>
 
@@ -372,5 +374,6 @@ document.getElementById('menuOverlay').classList.toggle('active');
 }
 </script>
 
+<script src="js/i18n.js"></script>
 </body>
 </html>

@@ -3,16 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){try{var f=localStorage.getItem("ttfont");if(f)document.documentElement.style.fontSize=f+"%";if(localStorage.getItem("tthc")==="1")document.documentElement.classList.add("tt-hc");}catch(e){}})();</script>
 
-<title>Pesca Embarcada | Toca do Tubarão | Ubatuba</title>
+<title data-i18n="pesca_title">Pesca Embarcada | Toca do Tubarão | Ubatuba</title>
 
 <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L8JJEB8HJL"></script>
   <script src="/js/analytics.js"></script>
 
-<meta name="description" content="Pesca Embarcada em Ubatuba. Modalidades de Pesca Subaquática e Pesca de Linha em ilhas, parceis, lajes e costões do litoral norte.">
+<meta name="description" data-i18n="pesca_desc" data-i18n-attr="content" content="Pesca Embarcada em Ubatuba. Modalidades de Pesca Subaquática e Pesca de Linha em ilhas, parceis, lajes e costões do litoral norte.">
 
 <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+<link rel="apple-touch-icon" href="images/favicon-180x180.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -129,6 +131,8 @@ width:50px;
 height:50px;
 border-radius:50%;
 border:2px solid white;
+object-fit:contain;
+background:#fff;
 }
 
 /* HERO */
@@ -250,36 +254,37 @@ text-decoration:none;
 .hero h1{font-size:2rem;}
 }
 </style>
+<link rel="stylesheet" href="css/acessibilidade.css">
 </head>
 
 <body>
 
-<div class="menu-toggle" onclick="toggleMenu()">
+<div class="menu-toggle" onclick="toggleMenu()" role="button" tabindex="0" aria-label="Abrir menu" data-i18n="ui_menu" data-i18n-attr="aria-label" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleMenu();}">
 <i class="fas fa-bars"></i>
 </div>
 
 <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
 <nav class="side-menu" id="sideMenu">
-<a href="index.html">Início</a>
-<a href="turismo-nautico.html">Turismo Náutico</a>
-<a href="pesca-embarcada.html">Pesca Embarcada</a>
-<a href="onda-perfeita.html">Em Busca da Onda Perfeita</a>
-<a href="sobre.html">Sobre</a>
+<a href="index.html" data-i18n="sh_nav_inicio">Início</a>
+<a href="turismo-nautico.html" data-i18n="sh_nav_turismo">Turismo Náutico</a>
+<a href="pesca-embarcada.html" data-i18n="sh_nav_pesca">Pesca Embarcada</a>
+<a href="onda-perfeita.html" data-i18n="sh_nav_onda">Em Busca da Onda Perfeita</a>
+<a href="sobre.html" data-i18n="sh_nav_sobre">Sobre</a>
 </nav>
 
 <header class="header">
 <a href="index.html" class="logo">
-<img src="images/logonovocomfundo.jpg" alt="Logo">
-<h2>Passeios Toca do Tubarão</h2>
+<img src="images/logo-icone.png" alt="Logo Toca do Tubarão" data-i18n="sh_logo_alt" data-i18n-attr="alt">
+<h2 data-i18n="sh_brand">Passeios Toca do Tubarão</h2>
 </a>
 </header>
 
-<section class="hero">
+<section class="hero" id="conteudo" tabindex="-1">
 <i class="fas fa-fish"></i>
-<h1>Pesca Embarcada</h1>
-<p>Duas modalidades para quem vive o mar com estratégia e leitura de condição: Pesca Subaquática e Pesca de Linha em pontos selecionados do litoral norte de Ubatuba.</p>
-<a href="index.html" class="back-button">← Voltar à Página Inicial</a>
+<h1 data-i18n="pesca_h1">Pesca Embarcada</h1>
+<p data-i18n="pesca_p">Duas modalidades para quem vive o mar com estratégia e leitura de condição: Pesca Subaquática e Pesca de Linha em pontos selecionados do litoral norte de Ubatuba.</p>
+<a href="index.html" class="back-button" data-i18n="sh_back_home">← Voltar à Página Inicial</a>
 </section>
 
 <section class="section">
@@ -287,65 +292,65 @@ text-decoration:none;
 <!-- TODO O CONTEÚDO ORIGINAL MANTIDO INTACTO -->
 
 <div class="box">
-<h2>Pesca Subaquática</h2>
-<p>Modalidade indicada para participantes com <strong>experiência prévia em mergulho e apneia</strong>, realizada com planejamento técnico e escolha de pontos conforme nível do praticante.</p>
+<h2 data-i18n="pesca_b1_h">Pesca Subaquática</h2>
+<p data-i18n="pesca_b1_p1" data-i18n-html>Modalidade indicada para participantes com <strong>experiência prévia em mergulho e apneia</strong>, realizada com planejamento técnico e escolha de pontos conforme nível do praticante.</p>
 <ul>
-<li><strong>Locais:</strong> Ilhas, parceis, lajes e costões.</li>
-<li><strong>Nível:</strong> Pontos selecionados conforme experiência do participante.</li>
+<li data-i18n="pesca_b1_li1" data-i18n-html><strong>Locais:</strong> Ilhas, parceis, lajes e costões.</li>
+<li data-i18n="pesca_b1_li2" data-i18n-html><strong>Nível:</strong> Pontos selecionados conforme experiência do participante.</li>
 </ul>
-<p>Atividade conduzida com leitura de mar, segurança operacional e respeito às normas ambientais vigentes.</p>
-<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre a Pesca Subaquática."
-class="cta" target="_blank">Consultar Disponibilidade</a>
+<p data-i18n="pesca_b1_p2">Atividade conduzida com leitura de mar, segurança operacional e respeito às normas ambientais vigentes.</p>
+<a data-i18n-wa="pesca_b1_wa" href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre a Pesca Subaquática."
+class="cta" target="_blank"><span data-i18n="sh_cta_consultar">Consultar Disponibilidade</span></a>
 </div>
 
 <div class="box">
-<h2>Pesca de Linha</h2>
-<p>Pesca embarcada tradicional com acompanhamento especializado e definição estratégica de pontos conforme condição do mar.</p>
+<h2 data-i18n="pesca_b2_h">Pesca de Linha</h2>
+<p data-i18n="pesca_b2_p">Pesca embarcada tradicional com acompanhamento especializado e definição estratégica de pontos conforme condição do mar.</p>
 <ul>
-<li><strong>Modalidade:</strong> Pesca de fundo e de passagem.</li>
-<li><strong>Locais:</strong> Ilhas, parceis, lajes e pontos estratégicos conforme leitura marítima.</li>
-<li><strong>Período:</strong> Durante todo o ano, respeitando o defeso.</li>
+<li data-i18n="pesca_b2_li1" data-i18n-html><strong>Modalidade:</strong> Pesca de fundo e de passagem.</li>
+<li data-i18n="pesca_b2_li2" data-i18n-html><strong>Locais:</strong> Ilhas, parceis, lajes e pontos estratégicos conforme leitura marítima.</li>
+<li data-i18n="pesca_b2_li3" data-i18n-html><strong>Período:</strong> Durante todo o ano, respeitando o defeso.</li>
 </ul>
-<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre a Pesca de Linha."
-class="cta" target="_blank">Consultar Disponibilidade</a>
+<a data-i18n-wa="pesca_b2_wa" href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre a Pesca de Linha."
+class="cta" target="_blank"><span data-i18n="sh_cta_consultar">Consultar Disponibilidade</span></a>
 </div>
 
 <div class="box">
-<h2>O que está incluso</h2>
+<h2 data-i18n="sh_incluso_title">O que está incluso</h2>
 <ul>
-<li>Marinheiro especializado</li>
-<li>Combustível para os trajetos descritos</li>
-<li>Cooler com gelo</li>
+<li data-i18n="pesca_b3_l1">Marinheiro especializado</li>
+<li data-i18n="pesca_b3_l2">Combustível para os trajetos descritos</li>
+<li data-i18n="sh_incl_cooler">Cooler com gelo</li>
 </ul>
 </div>
 
 <div class="box">
-<h2>Aluguel de Equipamentos</h2>
+<h2 data-i18n="pesca_b4_h">Aluguel de Equipamentos</h2>
 <ul>
-<li>Vara de pesca</li>
-<li>Molinete</li>
-<li>Linha</li>
+<li data-i18n="pesca_b4_l1">Vara de pesca</li>
+<li data-i18n="pesca_b4_l2">Molinete</li>
+<li data-i18n="pesca_b4_l3">Linha</li>
 </ul>
-<p><strong>Consulte disponibilidade e valores.</strong></p>
+<p data-i18n="pesca_b4_note" data-i18n-html><strong>Consulte disponibilidade e valores.</strong></p>
 </div>
 
 <div class="box">
-<h2>Informações Importantes</h2>
-<p>A realização da atividade depende das condições climáticas e do mar. Respeitamos as normas ambientais e o período de defeso vigente.</p>
+<h2 data-i18n="pesca_b5_h">Informações Importantes</h2>
+<p data-i18n="pesca_b5_p">A realização da atividade depende das condições climáticas e do mar. Respeitamos as normas ambientais e o período de defeso vigente.</p>
 </div>
 
 <div style="text-align:center;">
-<a href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre valores da Pesca Embarcada."
+<a data-i18n-wa="pesca_final_wa" href="https://wa.me/5512996450379?text=Olá! Gostaria de informações sobre valores da Pesca Embarcada."
 class="cta" target="_blank">
-Informações sobre Valores
+<span data-i18n="sh_cta_valores">Informações sobre Valores</span>
 </a>
 </div>
 
 </section>
 
 <footer class="footer">
-<p>&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
-<p>Desenvolvido por Luciane de Castro -
+<p data-i18n="sh_footer_rights">&copy; 2025 Passeios Toca do Tubarão. Todos os direitos reservados.</p>
+<p><span data-i18n="sh_footer_dev">Desenvolvido por Luciane de Castro -</span>
 <a href="mailto:luciane.castro@gmail.com">luciane.castro@gmail.com</a></p>
 </footer>
 
@@ -356,5 +361,6 @@ document.getElementById('menuOverlay').classList.toggle('active');
 }
 </script>
 
+<script src="js/i18n.js"></script>
 </body>
 </html>

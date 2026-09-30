@@ -1,0 +1,73 @@
+/* =========================================================================
+   Toca do Tubarão — acessibilidade + barra de idioma
+   Carregar no <head>, DEPOIS do </style> interno da página (vence a cascata).
+   Cobre: skip link, foco visível, barra idioma/A11y, alto contraste,
+   movimento reduzido e rede de segurança do VLibras.
+   ========================================================================= */
+
+/* --- Skip link (pular para o conteúdo) --- */
+.tt-skip{position:fixed;left:8px;top:-60px;background:#fbbc05;color:#001f33;
+  padding:10px 16px;border-radius:8px;z-index:3000;transition:top .2s;
+  text-decoration:none;font-weight:600;font-family:'Poppins',sans-serif;}
+.tt-skip:focus{top:8px;}
+
+/* --- Foco visível (WCAG 2.4.7) --- */
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{
+  outline:3px solid #fbbc05;outline-offset:2px;border-radius:3px;}
+
+/* --- Barra de idioma + acessibilidade (topo à esquerda) --- */
+.tt-bar{position:fixed;top:12px;left:12px;z-index:2500;display:flex;gap:8px;
+  align-items:center;flex-wrap:wrap;font-family:'Poppins',sans-serif;}
+.tt-grp{display:flex;align-items:center;gap:2px;background:rgba(0,31,51,.72);
+  backdrop-filter:blur(8px);border-radius:999px;padding:4px 6px;
+  box-shadow:0 6px 18px rgba(0,0,0,.3);}
+.tt-grp button{background:transparent;border:none;color:#fff;
+  font:600 13px 'Poppins',sans-serif;padding:6px 9px;border-radius:999px;
+  cursor:pointer;line-height:1;min-width:34px;}
+.tt-grp button:hover{background:rgba(255,255,255,.16);}
+.tt-grp button[aria-pressed='true']{background:#fbbc05;color:#001f33;}
+.tt-grp button[disabled]{opacity:.4;cursor:not-allowed;}
+.tt-globe{color:#fff;opacity:.85;padding:0 2px 0 6px;font-size:13px;}
+@media(max-width:768px){
+  .tt-bar{top:8px;left:8px;gap:6px;}
+  .tt-grp button{padding:5px 7px;min-width:30px;font-size:12px;}
+}
+
+/* --- Alto contraste --- */
+html.tt-hc body{background:#000 !important;color:#fff !important;}
+html.tt-hc .hero{background:#000 !important;}
+html.tt-hc h1,html.tt-hc h2,html.tt-hc h3,html.tt-hc h4,html.tt-hc p,
+html.tt-hc li,html.tt-hc span,html.tt-hc .section-title,
+html.tt-hc .destaques-title{color:#fff !important;}
+html.tt-hc a{color:#ffea00 !important;}
+html.tt-hc .hub-card,html.tt-hc .destaque-card,html.tt-hc .story,html.tt-hc .box,
+html.tt-hc .content-box,html.tt-hc .roteiro-card,html.tt-hc .service-card,
+html.tt-hc .itinerario-item,html.tt-hc .info-box,html.tt-hc .qual-card,
+html.tt-hc .google-review{background:#0a0f14 !important;border:2px solid #fff !important;}
+html.tt-hc .destaque-card::before{background:rgba(0,0,0,.8) !important;}
+html.tt-hc .btn-whatsapp-hero,html.tt-hc .cta,html.tt-hc .whatsapp-button{
+  background:#00e676 !important;color:#000 !important;}
+html.tt-hc .btn-google,html.tt-hc .back-button{background:#ffea00 !important;color:#000 !important;}
+html.tt-hc .tt-grp{background:#000 !important;border:1px solid #fff;}
+html.tt-hc .qual-card i,html.tt-hc .service-card i,html.tt-hc .roteiro-card i,
+html.tt-hc .hero i{color:#ffea00 !important;}
+
+/* --- Movimento reduzido (WCAG 2.3.3) --- */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;scroll-behavior:auto !important;}
+}
+
+/* --- VLibras: preso à janela e visível mesmo se o CSS dele falhar --- */
+div[vw]{position:fixed !important;right:14px !important;bottom:16px !important;
+  left:auto !important;top:auto !important;z-index:1600 !important;}
+div[vw-access-button]{position:relative !important;left:auto !important;top:auto !important;
+  display:block !important;width:52px !important;height:52px !important;min-width:52px !important;
+  opacity:1 !important;visibility:visible !important;pointer-events:auto !important;
+  cursor:pointer !important;background-color:#1351B4 !important;border-radius:50% !important;}
+div[vw-plugin-wrapper]{z-index:1600 !important;}
+@media(max-width:768px){
+  /* No celular o VLibras sobe, pra não colar no botão do WhatsApp/menu. */
+  div[vw]{bottom:auto !important;top:120px !important;}
+}
